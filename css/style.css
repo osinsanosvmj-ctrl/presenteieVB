@@ -1,0 +1,278 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #090D18;
+}
+
+.cabecalho {
+  width: 100%;
+  min-height: 75px;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0D1425;
+  border-bottom: 1px solid #1B2B46;
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo span:first-child{
+  color: #D6E2F0;
+}
+
+.logoDestaque{
+  color: #27C8FF;
+  font-size: 12px;
+}
+
+.cabecalho nav{
+  display: flex;
+  gap: 30px;
+}
+
+.cabecalho nav a{
+  color: #B8C8E8;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.cabecalho nav a:hover{
+  color: #27C8FF;
+}
+
+.apresentacao{
+  min-height: 480px;
+  padding: 100px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: radial-gradient(circle at 80% 50%, rgba(39, 200, 255, 0.12), transparent 35%),
+linear-gradient(
+  135deg, #090D18, #101C35
+  );
+}
+
+.substituto {
+  color: #27C8FF;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.apresentacao h1{
+  font-size: clamp(35px, 5vw, 60px);
+  margin-bottom: 20px;
+  color: #DCEBFF;
+}
+.apresentacao h1 span {
+  color: #27C8FF;
+  text-shadow: 0 0 20px rgba(39, 200, 255, 0.4);
+}
+.descricao{
+  max-width: 550px;
+  color: #D6E2F0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8px;
+  margin-bottom: 30px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #27C8FF;
+  color: #07111D;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(39, 200, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+.presentes {
+  padding: 80px 8%;
+}
+
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.titulo-secao h2 {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.titulo-secao p:last-child {
+  color: #AAB7CC;
+  font-size: 15px;
+}
+
+.lista-presentes {
+  display: grid;
+  grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card-presente {
+  background-color: #111B30;
+  border: 1px solid #243653;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card-presente:hover {
+  transform: translateY(-7px);
+  border-color: #27C8FF;
+  box-shadow:
+    0 0 15px rgba(39, 200, 255, 0.15);
+
+}
+
+.card-presente img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background-color: #FFFFFF;
+  padding: 10px;
+}
+
+.informacoes-presente {
+  padding: 22px;
+}
+
+.informacoes-presente h3 {
+  font-size: 19px;
+  margin-bottom: 12px;
+  color: #DCEBFF;
+}
+
+.informacoes-presente p {
+  color: #AAB7CC;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.preco {
+  color: #27C8FF;
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.prioridade {
+  display: inline-block;
+  padding: 6px 10px;
+  margin-bottom: 15px;
+  background-color: rgba(39, 200, 255, 0.1);
+  color: #27C8FF;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.botao-compra {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #27C8FF;
+  color: #07111D;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botao-compra:hover {
+  background-color: #FFFFFF;
+}
+
+footer {
+  padding: 30px 8%;
+  text-align: center;
+  background-color: #0D1425;
+  border-top: 1px solid #1B2B46;
+}
+
+footer p {
+  color: #8492AA;
+  font-size: 13px;
+  margin: 7px;
+}
+
+@media (max-width: 600px) {
+  .cabecalho {
+    padding: 18px 5%;
+  }
+
+  .cabecalho nav {
+    gap: 15px;
+  }
+
+  .cabecalho nav a {
+
+    font-size: 12px;
+
+  }
+
+  .apresentacao {
+
+    min-height: 430px;
+
+    padding: 70px 6%;
+
+  }
+
+  .apresentacao h1 {
+    font-size: 37px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
+
+  .presentes {
+    padding: 60px 6%;
+  }
+
+  .titulo-secao h2 {
+    font-size: 27px;
+  }
+
+  .lista-presentes {
+    grid-template-columns: 1fr;
+  }
+}
